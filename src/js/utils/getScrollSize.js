@@ -1,5 +1,3 @@
-/* global document */
-
 const getScrollSize = function () {
   const outer = document.createElement("div");
   const inner = document.createElement("div");

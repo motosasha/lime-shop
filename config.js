@@ -1,11 +1,9 @@
 /* global module */
 
 let config = {
-  "notGetBlocks": [
-    "blocks-demo.html"
-  ],
+  "notGetBlocks": [],
   "ignoredBlocks": [
-    "no-js"
+    "no-js",
   ],
   "alwaysAddBlocks": [],
   "addStyleBefore": [
@@ -14,24 +12,26 @@ let config = {
     "sanitize.css/assets.css",
     "sanitize.css/typography.css",
     "sanitize.css/reduce-motion.css",
-    "src/scss/variables.scss",
-    "src/scss/reboot.scss",
-    "src/scss/mixins.scss",
-    "src/scss/typography.scss",
-    "src/scss/vendor.scss",
-    "src/scss/fonts.scss",
-    "src/scss/animations.scss"
-    // "somePackage/dist/somePackage.css" // для 'node_modules/somePackage/dist/somePackage.css',
+    // "src/scss/variables.scss",
+    // "src/scss/reboot.scss",
+    // "src/scss/mixins.scss",
+    // "src/scss/typography.scss",
+    // "src/scss/vendor.scss",
+    // "src/scss/fonts.scss",
+    // "src/scss/animations.scss"
+    // "somePackage/dist/somePackage.css", // для "node_modules/somePackage/dist/somePackage.css",
   ],
   "addStyleAfter": [],
   "addJsBefore": [
-    // "somePackage/dist/somePackage.js" // для 'node_modules/somePackage/dist/somePackage.js',
+    // "somePackage/dist/somePackage.js", // для "node_modules/somePackage/dist/somePackage.js",
   ],
   "addJsAfter": [
-    "./script.js"
+    "./script.js",
   ],
-  'addAdditions': {
-    'src/favicon/*.{png,ico,svg,xml,webmanifest}': 'img/favicon'
+  "addAdditions": {
+    "src/img/**/*.*": "img/",
+    "src/favicon/*.*": "img/favicon",
+    // "node_modules/somePackage/images/*.{png,svg,jpg,jpeg}": "img/",
   },
   "dir": {
     "src": "src/",
@@ -42,4 +42,4 @@ let config = {
   }
 };
 
-export default config;
+module.exports = config;

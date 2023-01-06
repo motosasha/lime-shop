@@ -1,13 +1,13 @@
 {
-  "syntax": "postcss-scss",
+  "customSyntax": "postcss-scss",
   "extends": [
-    "stylelint-config-standard-scss",
-    "stylelint-config-rational-order",
-    "stylelint-prettier/recommended"
+    "stylelint-config-standard",
+    "stylelint-config-rational-order"
   ],
   "plugins": [
     "stylelint-order",
-    "stylelint-scss"
+    "stylelint-scss",
+    "stylelint-config-rational-order/plugin"
   ],
   "rules": {}
 }

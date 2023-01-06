@@ -8,10 +8,6 @@ src/pug/mixins.pug
 src/js/entry.js
 src/scss/style.scss
 
-src/blocks/sprite-svg/img/sprite.svg
-src/blocks/sprite-png/sprite-png.scss
-src/blocks/sprite-png/img/sprite-*.png
-
 __MACOSX
 .Saved/
 _arc/
@@ -19,11 +15,11 @@ bower_components/
 node_modules/
 .vscode/
 .publish/
+.idea/
 .DS_Store
 *.log
 *.sublime-*
 *.rar
 *.zip
-.idea
 ex_files
 Thumbs.db
