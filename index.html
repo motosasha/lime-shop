@@ -50,22 +50,67 @@ window.addEventListener('resize', () => {
   <div class="page">
     <div class="page__header">
       <div class="header">
-        <div class="header__inner">
-          <div class="header__left"><button class="header__menu"><svg class="header__burger" width="32" height="32" viewBox="0 0 32 32">
-                <path class="header__burger-line header__burger-line--top" d="M5.5 7.5H26C28.2091 7.5 30 9.29086 30 11.5C30 13.7091 28.2091 15.5 26 15.5H5.5"></path>
-                <path class="header__burger-line header__burger-line--middle" d="M5.5 15.5H26.5"></path>
-                <path class="header__burger-line header__burger-line--bottom" d="M22.5 23.5H6C3.83927 23.5 2 21.8182 2 19.5C2 17.1818 3.87396 15.5 6 15.5H26.5"></path>
-              </svg></button><button class="header__discount"><svg class="header__icon">
-                <use xlink:href="img/svgSprite.svg#icon__discount"></use>
-              </svg></button></div>
-          <div class="header__right">
-            <div class="header__links"><a class="header__link" href="#"><svg class="header__icon">
-                  <use href="img/svgSprite.svg#icon__user"></use>
-                </svg></a><a class="header__link" href="#"><svg class="header__icon">
-                  <use href="img/svgSprite.svg#icon__favorite"></use>
-                </svg></a></div><a class="header__link header__cart" href="#"><svg class="header__icon">
-                <use href="img/svgSprite.svg#icon__cart"></use>
-              </svg></a>
+        <div class="header__panel">
+          <div class="header__inner">
+            <div class="header-info"><a class="header-info__item" href="tel:7756"><svg class="header-info__icon">
+                  <use xlink:href="img/svgSprite.svg#icon__phone"></use>
+                </svg>7756</a><a class="header-info__item" href="#"><svg class="header-info__icon">
+                  <use xlink:href="img/svgSprite.svg#icon__pin"></use>
+                </svg>Магазины<svg class="header-info__arrow">
+                  <use xlink:href="img/svgSprite.svg#icon__arrow--down"></use>
+                </svg></a><a class="header-info__item" href="#"><svg class="header-info__icon">
+                  <use xlink:href="img/svgSprite.svg#icon__delivery"></use>
+                </svg>Зона доставки</a><a class="header-info__item" href="#"><svg class="header-info__icon">
+                  <use xlink:href="img/svgSprite.svg#icon__clock"></use>
+                </svg>17:00–17:45<svg class="header-info__arrow">
+                  <use xlink:href="img/svgSprite.svg#icon__arrow--down"></use>
+                </svg></a></div>
+            <div class="header-links"><a class="header-links__item" href="#">Шеф-лайм</a><a class="header-links__item" href="#">Вакансии</a><a class="header-links__item" href="#">Вопрос-ответ</a><a class="header-links__item" href="#">Партнерам</a><a class="header-links__item header-links__item--active" href="#">Бонусная программа</a></div>
+          </div>
+        </div>
+        <div class="header__body">
+          <div class="header__inner">
+            <div class="header__left"><button class="header__menu" aria-label="Каталог"><svg class="header__burger" width="32" height="32" viewBox="0 0 32 32">
+                  <path class="header__burger-line header__burger-line--top" d="M5.5 7.5H26C28.2091 7.5 30 9.29086 30 11.5C30 13.7091 28.2091 15.5 26 15.5H5.5"></path>
+                  <path class="header__burger-line header__burger-line--middle" d="M5.5 15.5H26.5"></path>
+                  <path class="header__burger-line header__burger-line--bottom" d="M22.5 23.5H6C3.83927 23.5 2 21.8182 2 19.5C2 17.1818 3.87396 15.5 6 15.5H26.5"></path>
+                </svg></button><button class="header-discount">
+                <div class="header-discount__sign"><svg class="header-discount__icon">
+                    <use xlink:href="img/svgSprite.svg#icon__discount"></use>
+                  </svg></div>
+                <div class="header-discount__inner">Скидки<svg class="header-discount__arrow">
+                    <use xlink:href="img/svgSprite.svg#icon__arrow--down"></use>
+                  </svg></div>
+              </button></div>
+            <div class="header__catalog"><button class="header-catalog"><svg class="header-catalog__icon">
+                  <use xlink:href="img/svgSprite.svg#icon__catalog"></use>
+                </svg>Каталог</button>
+              <form class="header-search"><input class="input" type="search" placeholder="Купить молоко" required="required" /><button class="header-search__button"><svg class="header-search__icon">
+                    <use xlink:href="img/svgSprite.svg#icon__search"></use>
+                  </svg></button></form>
+            </div>
+            <div class="header__right">
+              <div class="header-actions"><button class="header-discount header-discount--actions">
+                  <div class="header-discount__sign"><svg class="header-discount__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__discount"></use>
+                    </svg></div>
+                  <div class="header-discount__inner">Скидки<svg class="header-discount__arrow">
+                      <use xlink:href="img/svgSprite.svg#icon__arrow--down"></use>
+                    </svg></div>
+                </button><a class="header-actions__item" href="#"><svg class="header-actions__icon">
+                    <use href="img/svgSprite.svg#icon__user"></use>
+                  </svg>
+                  <div class="header-actions__title">Кабинет</div>
+                </a><a class="header-actions__item" href="#"><svg class="header-actions__icon">
+                    <use href="img/svgSprite.svg#icon__favorite"></use>
+                  </svg>
+                  <div class="header-actions__title">Избранное</div>
+                </a><a class="header-actions__item header-actions__item--cart" href="#"><svg class="header-actions__icon">
+                    <use href="img/svgSprite.svg#icon__cart"></use>
+                  </svg>
+                  <div class="header-actions__title">Корзина</div>
+                </a></div>
+            </div>
           </div>
           <div class="header__logo"><svg class="logo">
               <use href="img/svgSprite.svg#logo__lime"></use>
