@@ -1,0 +1,13 @@
+@import "../../scss/mixins/input-reset";
+
+.input {
+  $block-name: &; // #{$block-name}__element
+
+  @include input-reset;
+
+  display: block;
+  width: 100%;
+  padding: 13px 24px 12px;
+  background: var(--back-secondary);
+  border-radius: 10px;
+}

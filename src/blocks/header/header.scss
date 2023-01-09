@@ -1,39 +1,55 @@
-// В этом файле должны быть стили для БЭМ-блока header, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: https://nicothin.github.io/idiomatic-pre-CSS/#priority
-@import "../../scss/mixins/button-appearance-reset";
+@import "../../scss/mixins/button-reset";
 @import "../../scss/mixins/fluid";
-//@import url("../../scss/mixins/button-appearance-reset.scss");
-//@import url("../../scss/mixins/fluid.scss");
 
 .header {
   $block-name: &; // #{$block-name}__element
 
-  padding: 8px 0;
   background: var(--back-primary);
   box-shadow: var(--shadow-default);
 
+  &__panel {
+    display: none;
+    padding: 11px 16px 12px;
+    background: var(--back-quternary);
+
+    @media screen and (min-width: $screen-d) {
+      display: block;
+    }
+  }
+
+  &__body {
+    padding: 8px 4px 8px 9px;
+
+    @media screen and (min-width: $screen-t) {
+      padding: 8px 16px;
+    }
+
+    @media screen and (min-width: $screen-tl) {
+      padding: 14px 16px 15px;
+    }
+  }
+
   &__inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 140px;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 4px 0 9px;
+    max-width: 1640px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $screen-d) {
+      gap: 180px;
+    }
   }
 
   &__left {
     display: flex;
     gap: fluid(12, 24, 360, 576);
-  }
-
-  &__right {
-    display: flex;
-    gap: fluid(0, 8, 360, 576);
     align-items: center;
-  }
 
-  &__links {
-    display: flex;
-    gap: fluid(0, 20, 360, 576);
+    @media screen and (min-width: $screen-d) {
+      display: none;
+    }
   }
 
   &__logo {
@@ -50,19 +66,28 @@
     border-radius: 50%;
     box-shadow: var(--shadow-default);
     transform: translate(-50%, -54px);
+
+    @media screen and (min-width: $screen-d) {
+      align-items: center;
+      width: 150px;
+      height: 150px;
+      padding: 8px;
+      transform: translate(-50%, -18px);
+    }
   }
 
-  &__icon {
-    width: 24px;
-    height: 24px;
+  &__arrow {
+    width: 18px;
+    height: 18px;
   }
 
   &__menu {
-    @include button-appearance-reset;
+    @include button-reset;
 
     position: relative;
     width: 32px;
     height: 32px;
+    padding: 0;
     cursor: pointer;
   }
 
@@ -117,35 +142,12 @@
     }
   }
 
-  &__discount {
-    @include button-appearance-reset;
+  &__catalog {
+    display: none;
+    gap: 15px;
 
-    width: 32px;
-    height: 32px;
-    background: var(--accent-yellow);
-    border-radius: 5px;
-
-    #{$block-name}__icon {
-      fill: var(--front-primary);
-    }
-  }
-
-  &__link {
-    #{$block-name}__icon {
-      fill: var(--front-tertiary);
-    }
-  }
-
-  &__cart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 5px;
-
-    #{$block-name}__icon {
-      fill: var(--brand-primary);
+    @media screen and (min-width: $screen-d) {
+      display: flex;
     }
   }
 }

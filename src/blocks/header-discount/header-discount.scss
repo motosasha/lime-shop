@@ -1,0 +1,64 @@
+@import "../../scss/mixins/button-reset";
+@import "../../scss/mixins/text-styles";
+
+.header-discount {
+  $block-name: &; // #{$block-name}__element
+
+  @include button-reset;
+  @include header-actions;
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 0;
+
+  &--actions {
+    display: none;
+
+    @media screen and (min-width: $screen-d) {
+      display: flex;
+    }
+  }
+
+  &__sign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--accent-yellow);
+    border-radius: 5px;
+
+    @media screen and (min-width: $screen-t) {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  &__inner {
+    display: none;
+    gap: 8px;
+    align-items: center;
+
+    @media screen and (min-width: $screen-t) {
+      display: flex;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--front-primary);
+
+    @media screen and (min-width: $screen-t) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__arrow {
+    width: 18px;
+    height: 18px;
+    fill: var(--accent-yellow);
+  }
+}

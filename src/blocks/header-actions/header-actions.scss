@@ -1,0 +1,70 @@
+@import "../../scss/mixins/fluid";
+@import "../../scss/mixins/text-styles";
+
+.header-actions {
+  $block-name: &; // #{$block-name}__element
+
+  display: flex;
+  gap: fluid(0, 16, 360, 576);
+  align-items: center;
+  justify-content: end;
+
+  @media screen and (min-width: $screen-tl) {
+    gap: fluid(0, 16, 577, 1024);
+  }
+
+  @media screen and (min-width: $screen-d) {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+
+    #{$block-name}__icon {
+      fill: var(--front-tertiary);
+    }
+
+    &--cart {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 5px;
+
+      @media screen and (min-width: $screen-tl) {
+        width: auto;
+        height: auto;
+      }
+
+      #{$block-name}__icon {
+        fill: var(--brand-primary);
+      }
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+
+    @media screen and (min-width: $screen-t) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__title {
+    @include header-actions;
+
+    display: none;
+
+    @media screen and (min-width: $screen-tl) {
+      display: block;
+    }
+  }
+}

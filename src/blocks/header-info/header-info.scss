@@ -1,0 +1,35 @@
+@import "../../scss/mixins/text-styles";
+
+.header-info {
+  $block-name: &; // #{$block-name}__element
+
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    @include header-actions;
+
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: var(--front-invert);
+    text-decoration: none;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--accent-green);
+  }
+
+  &__arrow {
+    width: 10px;
+    height: 10px;
+    transition: transform 0.25s ease;
+
+    #{$block-name}--drop & {
+      transform: rotate(180deg);
+    }
+  }
+}

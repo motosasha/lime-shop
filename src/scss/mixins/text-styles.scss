@@ -1,0 +1,11 @@
+@mixin header-links {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+@mixin header-actions {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2142;
+}

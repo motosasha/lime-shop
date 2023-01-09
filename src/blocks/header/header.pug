@@ -18,28 +18,81 @@ mixin header(mods)
     }
 
   .header(class=allMods)&attributes(attributes)
-    .header__inner
-      .header__left
-        button.header__menu
-          svg.header__burger(width='32', height='32', viewBox='0 0 32 32')
-            path.header__burger-line.header__burger-line--top(d='M5.5 7.5H26C28.2091 7.5 30 9.29086 30 11.5C30 13.7091 28.2091 15.5 26 15.5H5.5')
-            path.header__burger-line.header__burger-line--middle(d='M5.5 15.5H26.5')
-            path.header__burger-line.header__burger-line--bottom(d='M22.5 23.5H6C3.83927 23.5 2 21.8182 2 19.5C2 17.1818 3.87396 15.5 6 15.5H26.5')
-        button.header__discount
-          svg.header__icon
-            use(xlink:href='img/svgSprite.svg#icon__discount')
-
-      .header__right
-        .header__links
-          a.header__link(href='#')
-            svg.header__icon
-              use(href='img/svgSprite.svg#icon__user')
-          a.header__link(href='#')
-            svg.header__icon
-              use(href='img/svgSprite.svg#icon__favorite')
-        a.header__link.header__cart(href='#')
-          svg.header__icon
-            use(href='img/svgSprite.svg#icon__cart')
+    .header__panel
+      .header__inner
+        .header-info
+          a.header-info__item(href='tel:7756')
+            svg.header-info__icon
+              use(xlink:href='img/svgSprite.svg#icon__phone')
+            | 7756
+          a.header-info__item(href='#')
+            svg.header-info__icon
+              use(xlink:href='img/svgSprite.svg#icon__pin')
+            | Магазины
+            svg.header-info__arrow
+              use(xlink:href='img/svgSprite.svg#icon__arrow--down')
+          a.header-info__item(href='#')
+            svg.header-info__icon
+              use(xlink:href='img/svgSprite.svg#icon__delivery')
+            | Зона доставки
+          a.header-info__item(href='#')
+            svg.header-info__icon
+              use(xlink:href='img/svgSprite.svg#icon__clock')
+            | 17:00–17:45
+            svg.header-info__arrow
+              use(xlink:href='img/svgSprite.svg#icon__arrow--down')
+        .header-links
+          a.header-links__item(href='#') Шеф-лайм
+          a.header-links__item(href='#') Вакансии
+          a.header-links__item(href='#') Вопрос-ответ
+          a.header-links__item(href='#') Партнерам
+          a.header-links__item.header-links__item--active(href='#') Бонусная программа
+    .header__body
+      .header__inner
+        .header__left
+          button.header__menu(aria-label='Каталог')
+            svg.header__burger(width='32', height='32', viewBox='0 0 32 32')
+              path.header__burger-line.header__burger-line--top(d='M5.5 7.5H26C28.2091 7.5 30 9.29086 30 11.5C30 13.7091 28.2091 15.5 26 15.5H5.5')
+              path.header__burger-line.header__burger-line--middle(d='M5.5 15.5H26.5')
+              path.header__burger-line.header__burger-line--bottom(d='M22.5 23.5H6C3.83927 23.5 2 21.8182 2 19.5C2 17.1818 3.87396 15.5 6 15.5H26.5')
+          button.header-discount
+            .header-discount__sign
+              svg.header-discount__icon
+                use(xlink:href='img/svgSprite.svg#icon__discount')
+            .header-discount__inner Скидки
+              svg.header-discount__arrow
+                use(xlink:href='img/svgSprite.svg#icon__arrow--down')
+        .header__catalog
+          button.header-catalog
+            svg.header-catalog__icon
+              use(xlink:href='img/svgSprite.svg#icon__catalog')
+            | Каталог
+          form.header-search
+            input.input(type='search', placeholder='Купить молоко', required)
+            button.header-search__button
+              svg.header-search__icon
+                use(xlink:href='img/svgSprite.svg#icon__search')
+        .header__right
+          .header-actions
+            button.header-discount.header-discount--actions
+              .header-discount__sign
+                svg.header-discount__icon
+                  use(xlink:href='img/svgSprite.svg#icon__discount')
+              .header-discount__inner Скидки
+                svg.header-discount__arrow
+                  use(xlink:href='img/svgSprite.svg#icon__arrow--down')
+            a.header-actions__item(href='#')
+              svg.header-actions__icon
+                use(href='img/svgSprite.svg#icon__user')
+              .header-actions__title Кабинет
+            a.header-actions__item(href='#')
+              svg.header-actions__icon
+                use(href='img/svgSprite.svg#icon__favorite')
+              .header-actions__title Избранное
+            a.header-actions__item.header-actions__item--cart(href='#')
+              svg.header-actions__icon
+                use(href='img/svgSprite.svg#icon__cart')
+              .header-actions__title Корзина
       .header__logo
         svg.logo
           use(href='img/svgSprite.svg#logo__lime')

@@ -1,0 +1,22 @@
+@import "../../scss/mixins/button-reset";
+@import "../../scss/mixins/text-styles";
+
+.header-catalog {
+  $block-name: &; // #{$block-name}__element
+
+  @include button-reset;
+  @include header-actions;
+
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 10px 18px;
+  background: var(--accent-green);
+  border-radius: 10px;
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    color: inherit;
+  }
+}

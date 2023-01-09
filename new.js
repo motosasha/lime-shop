@@ -29,12 +29,12 @@ if (blockName) {
     let fileCreateMsg = '';                                 // будущее сообщение в консоли при создании файла
 
     if (extension === 'scss') {
-      fileContent = `// В этом файле должны быть стили для БЭМ-блока ${blockName}, его элементов,\n// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...\n// Очередность: https://nicothin.github.io/idiomatic-pre-CSS/#priority\n\n.${blockName} {\n\n  $block-name: &; // #{$block-name}__element\n}\n`;
+      fileContent = `.${blockName} {\n  $block-name: &; // #{$block-name}__element\n}\n`;
       // fileCreateMsg = '';
     }
 
     else if (extension === 'js') {
-      fileContent = `/* global document */\n\n// import ready from '../../js/utils/documentReady.js';\n\n// ready(function() {\n//   \n// });\n`;
+      fileContent = `// import ready from "../../js/utils/documentReady.js";\n\n// ready(function () {\n//   \n// });\n`;
     }
 
     else if (extension === 'md') {
