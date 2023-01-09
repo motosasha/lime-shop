@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=3, minimum-scale=0.1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <meta name="google" content="notranslate">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="robots" content="index, follow">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <title>Стартовая страница</title>
+  <meta name="description" content="description">
+  <meta name="keywords" content="keywords">
+  <link rel="stylesheet" href="css/style.css"><script>// Убрать на html класс "no-js", добавить класс "js": с уровня стилей знаем работает ли JS
+document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+// Браузер и ОС
+function cth(c){document.documentElement.classList.add(c)}
+'ontouchstart' in window?cth('touch'):cth('no-touch');
+if(typeof InstallTrigger!=='undefined')cth('firefox');
+if(/constructor/i.test(window.HTMLElement)||(function(p){return p.toString()==="[object SafariRemoteNotification]"})(!window['safari']||(typeof safari!=='undefined'&&safari.pushNotification)))cth('safari');
+if(/*@cc_on!@*/!!document.documentMode)cth('ie');
+if(!(!!document.documentMode)&&!!window.StyleMedia)cth('edge');
+if(!!window.chrome&&(!!window.chrome.webstore||!!window.chrome.runtime))cth('chrome');
+if(~navigator.appVersion.indexOf("Win"))cth('windows');
+if(~navigator.appVersion.indexOf("Mac"))cth('osx');
+if(~['iPad','iPhone','iPod'].indexOf(navigator.platform))cth('ios');
+if(~navigator.appVersion.indexOf("Linux"))cth('linux');
+
+// Добавление 1vh (использование: height: 100vh; height: calc(var(--vh, 1vh) * 100);) для фикса 100vh на мобилках
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+window.addEventListener('resize', () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+</script>
+</head>
+
+<body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
+  <div class="page">
+    <div class="page__header">
+      <div class="header">
+        <div class="header__inner">
+          <div class="header__left"><button class="header__menu"><svg class="header__burger" width="32" height="32" viewBox="0 0 32 32">
+                <path class="header__burger-line header__burger-line--top" d="M5.5 7.5H26C28.2091 7.5 30 9.29086 30 11.5C30 13.7091 28.2091 15.5 26 15.5H5.5"></path>
+                <path class="header__burger-line header__burger-line--middle" d="M5.5 15.5H26.5"></path>
+                <path class="header__burger-line header__burger-line--bottom" d="M22.5 23.5H6C3.83927 23.5 2 21.8182 2 19.5C2 17.1818 3.87396 15.5 6 15.5H26.5"></path>
+              </svg></button><button class="header__discount"><svg class="header__icon">
+                <use xlink:href="img/svgSprite.svg#icon__discount"></use>
+              </svg></button></div>
+          <div class="header__right">
+            <div class="header__links"><a class="header__link" href="#"><svg class="header__icon">
+                  <use href="img/svgSprite.svg#icon__user"></use>
+                </svg></a><a class="header__link" href="#"><svg class="header__icon">
+                  <use href="img/svgSprite.svg#icon__favorite"></use>
+                </svg></a></div><a class="header__link header__cart" href="#"><svg class="header__icon">
+                <use href="img/svgSprite.svg#icon__cart"></use>
+              </svg></a>
+          </div>
+          <div class="header__logo"><svg class="logo">
+              <use href="img/svgSprite.svg#logo__lime"></use>
+            </svg></div>
+        </div>
+      </div>
+    </div>
+    <div class="page__main">
+      <div style="height: 1500px">content</div>
+    </div>
+    <div class="page__footer">footer</div>
+  </div><script src="js/bundle.js"></script>
+</body>
+
+</html>
