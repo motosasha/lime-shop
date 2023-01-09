@@ -1,0 +1,45 @@
+//- Все примеси в этом файле должны начинаться c имени блока (header)
+
+mixin header(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +header('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' header--' + modsList[i].trim();
+      }
+    }
+
+  .header(class=allMods)&attributes(attributes)
+    .header__inner
+      .header__left
+        button.header__menu
+          svg.header__burger(width='32', height='32', viewBox='0 0 32 32')
+            path.header__burger-line.header__burger-line--top(d='M5.5 7.5H26C28.2091 7.5 30 9.29086 30 11.5C30 13.7091 28.2091 15.5 26 15.5H5.5')
+            path.header__burger-line.header__burger-line--middle(d='M5.5 15.5H26.5')
+            path.header__burger-line.header__burger-line--bottom(d='M22.5 23.5H6C3.83927 23.5 2 21.8182 2 19.5C2 17.1818 3.87396 15.5 6 15.5H26.5')
+        button.header__discount
+          svg.header__icon
+            use(xlink:href='img/svgSprite.svg#icon__discount')
+
+      .header__right
+        .header__links
+          a.header__link(href='#')
+            svg.header__icon
+              use(href='img/svgSprite.svg#icon__user')
+          a.header__link(href='#')
+            svg.header__icon
+              use(href='img/svgSprite.svg#icon__favorite')
+        a.header__link.header__cart(href='#')
+          svg.header__icon
+            use(href='img/svgSprite.svg#icon__cart')
+      .header__logo
+        svg.logo
+          use(href='img/svgSprite.svg#logo__lime')

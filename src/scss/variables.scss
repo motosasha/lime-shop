@@ -1,0 +1,45 @@
+@use "sass:color";
+
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --font-base: var(--font-sans);
+  --font-sans:
+    Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu",
+    "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --font-serif: Georgia, "Times New Roman", Times, serif;
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, "Courier New", monospace;
+  --body-color: var(--front-primary);
+  --body-bg: var(--back-primary);
+  --font-size-root: 100%;
+  --font-size-base: 1rem;
+  --font-weight-base: 400;
+  --line-height-base: 1.25;
+
+  // Семантические цвета
+
+  --brand-primary: #93c10e;
+  --front-primary: #333;
+  --front-secondary: #555;
+  --front-tertiary: #c8c8c8;
+  --front-invert: #fff;
+  --back-primary: #fff;
+  --back-secondary: #f0f0f0;
+  --back-tertiary: #e0e0e0;
+  --border-primary: #aaa;
+  --link-color: #0069b4;
+  --accent-yellow: #ffc709;
+
+  // Оформление
+
+  --shadow-default: 0 0 10px rgb(0 0 0 / 10%);
+}
+
+$screen-m: 0;
+$screen-t: 576px;
+$screen-ti: 768px;
+$screen-tl: 992px;
+$screen-d: 1280px;
+$screen-dl: 1440px;
+$screen-dxl: 1680px;
